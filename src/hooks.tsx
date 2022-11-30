@@ -1,9 +1,7 @@
+import React from 'react';
 import HeartBrokenIcon from '@mui/icons-material/HeartBroken';
 
-
-
 const useAge = () => {
-  // you will want some kind of implementation here
 
    const one_day=1000*60*60*24;
 
@@ -12,13 +10,10 @@ const useAge = () => {
 
     const diff = Math.ceil((d2-d1)/(one_day));
 
-    if (diff === 0) {
-       return (<div>Posted today</div>);
-    } else if (diff === 1) {
-        return (<div>Posted yesterday</div>);
-    } else {
-        return (<div> My love left <span> {diff}</span> days ago  <HeartBrokenIcon style={{width: 60, height: 60}} className='heart'/></div>);
-    }
+   return (
+   <div className='left-time'> My love left <span> {diff}</span> days ago  <HeartBrokenIcon style={{width: 60, height: 60}} className='heart'/>
+   </div>);
+
 };
 
 

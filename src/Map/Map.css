@@ -1,0 +1,7 @@
+.map-wrapper {
+    display: flex;
+    gap: 2rem;
+}
+.maps {
+    font-size: 2rem;
+}

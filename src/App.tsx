@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from "react"
 import { useAge } from './hooks';
+import MapHouston from './Map/Map';
+
 
 
 function App() {
@@ -52,17 +54,18 @@ function App() {
 		<div className="container">
 			<div className="carousel">
 				<img src={`${process.env.PUBLIC_URL}/picture.jpg`} alt="Landscape 1"/>
-				<img src={`${process.env.PUBLIC_URL}/picture.jpg`} alt="Landscape 2"/>
-				<img src={`${process.env.PUBLIC_URL}/picture.jpg`} alt="Landscape 3"/>
-				<img src={`${process.env.PUBLIC_URL}/picture.jpg`} alt="Landscape 4"/>
-				<img src={`${process.env.PUBLIC_URL}/picture.jpg`} alt="Landscape 5"/>
-				<img src={`${process.env.PUBLIC_URL}/picture.jpg`} alt="Landscape 6"/>
-				<img src={`${process.env.PUBLIC_URL}/picture.jpg`} alt="Landscape 7"/>
-				<img src={`${process.env.PUBLIC_URL}/picture.jpg`} alt="Landscape 8"/>
+				<img src={`${process.env.PUBLIC_URL}/castle.jpg`} alt="Landscape 2"/>
+				<img src={`${process.env.PUBLIC_URL}/ring.jpg`} alt="Landscape 3"/>
+				<img src={`${process.env.PUBLIC_URL}/gallery.jpg`} alt="Landscape 4"/>
+				<img src={`${process.env.PUBLIC_URL}/birthday.jpg`} alt="Landscape 5"/>
+				<img src={`${process.env.PUBLIC_URL}/vltava.jpg`} alt="Landscape 6"/>
+				<img src={`${process.env.PUBLIC_URL}/carlovyvary.jpg`} alt="Landscape 7"/>
+				<img src={`${process.env.PUBLIC_URL}/sky.jpg`} alt="Landscape 8"/>
 			</div>
 		</div>
 
-	</div>
+	      </div>
+        <MapHouston />
 
     </div>
   );

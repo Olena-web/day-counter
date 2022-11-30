@@ -1,0 +1,6 @@
+.time-wrapper {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
