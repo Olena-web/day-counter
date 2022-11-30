@@ -22,6 +22,7 @@ body {
   font-size: 60px;
   font-style: italic;
   font-weight: bold;
+  margin-bottom: 4rem;
 }
 .love{
   margin-top: 35px;
@@ -66,7 +67,7 @@ body {
 .heart {
   animation: heartbeat 1.5s infinite;
 }
-body > div {
+body > div:second-child {
   width: 500px;
   margin: 50px auto;
   text-align: center;
@@ -77,8 +78,7 @@ figure {
 }
 
 .container {
-  margin-bottom: 12rem;
-  width: 500px;
+  width: 350px;
   height: 300px;
   text-align: left;
   margin: 60px auto;
@@ -91,8 +91,8 @@ figure {
     transform: translateZ(-540px);
     position: relative;
     margin: 0;
-    width: 400px;
-    height: 300px;
+    width: 360px;
+    height: 400px;
     transition: 1s;
   }
 
@@ -105,8 +105,8 @@ figure {
       height: 100%; 
       width: 100%;
       object-fit: contain;
-      
       background:#ccc;
+      margin-bottom: 4rem;
     }
 
       
@@ -124,9 +124,9 @@ label {
   background: #eee;
   display: inline-block;
   border-radius: 50%;
-  width: 30px;
+  width: 40px;
   padding-top: 7px;
-  height: 23px;
+  height: 29px;
   font: .9em Arial;
 }
 
