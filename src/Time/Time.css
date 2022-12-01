@@ -6,3 +6,20 @@
     margin-bottom: 1rem;
     gap: 2rem;
 }
+.time-wrapper {
+    flex-direction: row;
+    align-items: center;
+    height: 20rem;
+    width: 100%;
+    color: lightseagreen;
+}
+.time-wrapper > div:nth-child(1),
+.time-wrapper > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.day-time {
+    width: 30px;
+}
