@@ -2,13 +2,13 @@ import React from 'react';
 import {useEffect, useState} from 'react';
 import { ApyData } from '../type';
 
-export  const Weather = () => {
+export  const Weather = (city: string) => {
   const [weather, setWeather] = React.useState({} as ApyData);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Conroe&lang=en&appid=bcc33196cdb4397674f34d818b09afee&units=metric')
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=en&appid=bcc33196cdb4397674f34d818b09afee&units=metric`)
 
       .then(response => {
         if (response.ok) {
@@ -36,7 +36,7 @@ export  const Weather = () => {
 
   return (
     <div>
-      <p>Weather in Conroe: </p>
+      <p>Weather in {city}: </p>
       <div className="weather">
       <input type="text" className="city" placeholder="" />
       <i className='me'></i>
@@ -44,12 +44,12 @@ export  const Weather = () => {
       <div className="weather_error"></div>
 
     <div className="description-container">
-      <span className="temperature">
+      <div className="temperature">
       temp: {Math.round(weather.main.temp)} °C
-      </span>
-      <span className="weather-description">
+      </div>
+      <div className="weather-description">
         {weather.weather[0].description}
-      </span>
+      </div>
     </div>
     <div className="wind">
     wind : {Math.round(weather.wind.speed)} m/s
