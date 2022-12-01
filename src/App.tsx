@@ -16,16 +16,8 @@ function App() {
 
   return (
     <div className="App">
-
-        {/* Last Updated: {theTimeThatPassed} */}
         {theTimeThatPassed}
-        {/* <div className='love'>
-        <img className="img-fluid"
-              src={`${process.env.PUBLIC_URL}/picture.jpg`}
-              alt="love"/>
-        </div> */}
-
-        <div>
+    <div>
 
 		<input checked={isChecked}
         onChange={checkHandler} id="one" name="multiples" type="radio" value="1"/>

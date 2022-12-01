@@ -2,7 +2,7 @@
 .weather-wrapper {
     display: flex;
     justify-content: space-around;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     gap: 2rem;
 }

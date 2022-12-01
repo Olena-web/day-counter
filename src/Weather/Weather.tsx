@@ -1,6 +1,7 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
 import { ApyData } from '../type';
+import './Weather.css';
 
 export  const Weather = (city: string) => {
   const [weather, setWeather] = React.useState({} as ApyData);
@@ -18,13 +19,11 @@ export  const Weather = (city: string) => {
         }
       })
       .then(data => {
-        console.log(data, data.weather[0].id);
-
         setWeather(data);
         setIsLoading(false);
       })
       .catch(error => setError(error));
-  }, []);
+  }, [city]);
 
   if (error) {
     return <p>{error}</p>;
@@ -40,19 +39,19 @@ export  const Weather = (city: string) => {
       <div className="weather">
       <input type="text" className="city" placeholder="" />
       <i className='me'></i>
-      <i className={ `weather-icon owf owf-${weather.weather[0].id}`}></i>
+      <i className={ `weather-icon owf owf-${weather.weather[0].id}-d`}></i>
       <div className="weather_error"></div>
 
     <div className="description-container">
       <div className="temperature">
-      temp: {Math.round(weather.main.temp)} °C
+      t {Math.round(weather.main.temp)} °C
       </div>
       <div className="weather-description">
         {weather.weather[0].description}
       </div>
     </div>
     <div className="wind">
-    wind : {Math.round(weather.wind.speed)} m/s
+    wind : speed {Math.round(weather.wind.speed)} m/s
     </div>
     <div className="humidity">
     humidity: {Math.round(weather.main.humidity)} %
