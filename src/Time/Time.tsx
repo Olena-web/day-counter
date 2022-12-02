@@ -1,24 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import './Time.css';
 import Weather from '../Weather/Weather';
 import { getTimeOfDay } from '../helpers';
 
 export const Time = () =>  {
-  const timeDavid = new Date().toLocaleString('en-US', { timeZone: 'America/Chicago', hour12: false });
+  const timeDavid = new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' });
   const timeOlena = new Date().toLocaleString('en-US', { timeZone: 'Europe/Kiev'});
 
-  const timeDavidObj = new Date(timeDavid);
-  const timeOlenaObj = new Date(timeOlena);
+
 
   const[greeting1, setGreeting1] = React.useState('good morning');
   const[greeting2, setGreeting2] = React.useState('good morning');
   const[style1, setStyle1] = React.useState('');
   const [style2, setStyle2] = React.useState('');
-  const[time1, setTime1] = React.useState(timeDavidObj.toLocaleTimeString());
-  const[time2, setTime2] = React.useState(timeOlenaObj.toLocaleTimeString());
+  const[time1, setTime1] = React.useState(new Date(timeDavid).toLocaleTimeString());
+  const[time2, setTime2] = React.useState(new Date(timeOlena).toLocaleTimeString());
 
-  const greetingDavid = getTimeOfDay(timeDavidObj);
-  const greetingOlena = getTimeOfDay(timeOlenaObj);
+  const greetingDavid = getTimeOfDay(new Date(timeDavid));
+  const greetingOlena = getTimeOfDay(new Date(timeOlena));
 
 
   useEffect(() => {
@@ -26,13 +25,19 @@ export const Time = () =>  {
   setGreeting2(greetingOlena[0]);
   setStyle1(greetingDavid[1]);
   setStyle2(greetingOlena[1]);
-  setTimeout(() => {
+  }, [greeting1, greeting2, greetingDavid, greetingOlena]);
+
+useMemo(() => {
+  const timeDavidObj = new Date(timeDavid);
+  const timeOlenaObj = new Date(timeOlena);
+    setTimeout(() => {
     setTime1(timeDavidObj.toLocaleTimeString());
   }, 1000);
   setTimeout(() => {
     setTime2(timeOlenaObj.toLocaleTimeString());
   }, 1000);
-  }, [greeting1, greeting2, greetingDavid, greetingOlena, timeDavidObj, timeOlenaObj]);
+}, [timeDavid, timeOlena]);
+
 
   return (
     <>
