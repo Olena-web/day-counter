@@ -101,7 +101,7 @@ figure {
 
     .carousel img {
       position: absolute;
-      border: 15px solid rgba(0, 0, 0, .8);
+      border: 12px solid cadetblue;
       opacity: .5;
       transition: 1s;
       -webkit-transition: 1s;
@@ -164,3 +164,24 @@ input:checked + label {
   input[value="6"]:checked ~ .container .carousel img:nth-child(6) { transform: rotateY(225deg) translateZ(540px) scale(1); opacity: 1; }
   input[value="7"]:checked ~ .container .carousel img:nth-child(7) { transform: rotateY(270deg) translateZ(540px) scale(1); opacity: 1; }
   input[value="8"]:checked ~ .container .carousel img:nth-child(8) { transform: rotateY(315deg) translateZ(540px) scale(1); opacity: 1; }
+
+
+  @media (max-width: 660px) {
+    .container {
+      perspective: 300px;
+      perspective-origin: 50% -25%;
+    }
+  
+  }
+  @media (max-width: 550px) {
+    .container {
+      perspective: 110px;
+      width: 348px;
+      margin: 100px auto;
+    }
+    .carousel {
+      width: 350px;
+      height: 350px;
+    }
+  
+  }
