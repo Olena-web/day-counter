@@ -27,3 +27,11 @@
         object-fit: cover;
     
 }
+.parallax-img {
+    height: 32rem;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }

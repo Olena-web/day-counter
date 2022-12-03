@@ -6,9 +6,11 @@ export default function MapHouston() {
   return (
     <div className='maps'>
       <h2>Conroe-Balta</h2>
-      <div className='globe'>
-        <img src={`${process.env.PUBLIC_URL}/globe.jpg`} alt="globe" />
-      </div>
+      {/* <div className='globe'> */}
+        {/* <img src={`${process.env.PUBLIC_URL}/globe.jpg`} alt="globe" /> */}
+
+      {/* </div> */}
+      <div className= 'parallax-img' style={{backgroundImage:`url(${process.env.PUBLIC_URL}/globe.jpg)`}}></div>
       <Time />
       <div className="map-wrapper">
 
