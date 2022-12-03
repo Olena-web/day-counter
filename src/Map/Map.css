@@ -1,8 +1,9 @@
 .map-wrapper {
+    width: 100%;
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;;
     margin-bottom: 2rem;
 }
 
@@ -12,6 +13,7 @@
     object-fit: cover;
 }
 .maps {
+    width: 100%;
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
@@ -34,4 +36,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+  }
+  @media screen and (max-width: 768px) {
+    .parallax-img {
+      height: 20rem;
+    }
   }
