@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
+import Button from '@mui/material/Button';
 //https://upmostly.com/tutorials/build-a-react-timer-component-using-hooks
 export const Timer = () => {
   const [seconds, setSeconds] = useState(0);
@@ -40,9 +41,12 @@ export const Timer = () => {
         {/* <button className={`button button-primary button-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggle}>
           {isActive ? 'Pause' : 'Start'}
         </button> */}
-        <button className="button" onClick={reset}>
-          Reset
-        </button>
+        {/* <button className="button" onClick={reset}>
+            Reset
+        </button> */}
+        <Button variant="outlined" startIcon={<RestartAltIcon />} onClick={reset}>
+        Reset
+      </Button>
       </div>
 
   );
