@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from "react"
 import { useAge } from './hooks';
 import MapHouston from './Map/Map';
+import {Timer} from './Update/Update';
 
 
 
@@ -43,6 +44,8 @@ function App() {
 
         <input id="eight" name="multiples" type="radio" value="8"/>
         <label htmlFor="eight">8</label>
+        <input id="nine" name="multiples" type="radio" value="9"/>
+        <label htmlFor="nine">9</label>
 
 		<div className="container">
 			<div className="carousel">
@@ -54,11 +57,14 @@ function App() {
 				<img src={`${process.env.PUBLIC_URL}/vltava.jpg`} alt="Landscape 6"/>
 				<img src={`${process.env.PUBLIC_URL}/carlovyvary.jpg`} alt="Landscape 7"/>
 				<img src={`${process.env.PUBLIC_URL}/sky.jpg`} alt="Landscape 8"/>
+				<img src={`${process.env.PUBLIC_URL}/hotel.jpg`} alt="Landscape 8"/>
+
 			</div>
 		</div>
 
 	      </div>
         <MapHouston />
+        <Timer />
 
     </div>
   );
