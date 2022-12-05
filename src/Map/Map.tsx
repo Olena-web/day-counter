@@ -8,8 +8,10 @@ export default function MapHouston() {
       <h2>Conroe-Balta</h2>
       <h4>Total distance: 9,742.93 km (6,053.98 mi) - 1/4 length of the equator</h4>
       <div className='globe'>
-        <img src={`${process.env.PUBLIC_URL}/globe.jpg`} alt="globe" />
+        {/* <img src={`${process.env.PUBLIC_URL}/globe.jpg`} alt="globe" /> */}
       </div>
+
+      <div className= 'parallax-img' style={{backgroundImage:`url(${process.env.PUBLIC_URL}/globe.jpg)`}}></div>
       <Time />
       <div className="map-wrapper">
 

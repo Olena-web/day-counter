@@ -7,6 +7,7 @@
     gap: 2rem;
 }
 .time-wrapper {
+    margin-top: 2rem;
     flex-direction: row;
     align-items: center;
     height: 20rem;
