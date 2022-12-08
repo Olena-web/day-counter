@@ -13,7 +13,7 @@ export default function MapHouston() {
 
       <div className= 'parallax-img' style={{backgroundImage:`url(${process.env.PUBLIC_URL}/globe.jpg)`}}></div>
       <Time />
-      <div className="map-wrapper">
+      <div className="map-wrapper" style={{backgroundImage:`url(${process.env.PUBLIC_URL}/bluesky.jpg)`}}>
 
       <iframe title="davidFrame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3445.675659082065!2d-95.48247337705386!3d30.274821227551417!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86473bd4b5fc054d%3A0x23e0de5d18d7c283!2s218%20Torrey%20Bloom%20Lp%2C%20Conroe%2C%20TX%2077304%2C%20USA!5e0!3m2!1sen!2sua!4v1669968141368!5m2!1sen!2sua"
       style={{width: 400, height: 400, border: 0 }} loading="lazy"  referrerPolicy="no-referrer-when-downgrade" ></iframe>

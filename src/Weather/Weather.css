@@ -1,7 +1,8 @@
 .weather-wrapper{
     width: 100%;
     gap: 0;
-    padding-bottom: 2rem
+    padding-bottom: 2rem;
+    
 }
 @media (max-width: 550px) {
     .weather-wrapper{
